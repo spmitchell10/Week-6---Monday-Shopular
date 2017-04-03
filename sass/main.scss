@@ -1,0 +1,28 @@
+body {
+	font-family: 'Work Sans', sans-serif;
+	padding-left: 200px;
+	padding-right: 200px;
+	height: 400px;
+	.table{
+		transform: uppercase;
+		border: 1px solid lightgrey;
+		th, td{
+			border-right: 1px solid lightgrey;
+		}
+	}
+
+
+
+}
+
+.shopular{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.colorIcon{
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	margin-right: 5px;
+}
