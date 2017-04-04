@@ -11,9 +11,29 @@
 
 <body ng-controller='HeaderController as vm'>
     <header headroom class="container-fluid">
-        <div class="row">
-            <h1 class="shopular">shopular<a style=color:white>.js</a></h1>
+        <div class="row topGreyRow">
+            <button class="btn btn-primary login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Login
+            </button>
+            <div class="collapse" id="collapseExample">
+                <div class="well">
+                    <form novalidate name='userDetails'>
+                        Name:
+                        <input type='text' ng-model='vm.item.name' required>
+                        <br> Price:
+                        <input type='text' ng-model='vm.item.price' required>
+                        <br> Quantity:
+                        <input type='number' ng-model='vm.item.quantity' required min='0' max='18'>
+                        <br> Color:
+                        <input type='text' ng-model='vm.item.color' required>
+                        <button ng-click="vm.click()" class="btn btn-primary" type="button">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
+        <h1 class="shopular">shopular<a style=color:white>.js</a></h1>
         <div class="row bottomLine"></div>
     </header>
     <div class="container">
@@ -30,8 +50,12 @@
                 <tr ng-repeat="data in vm.data">
                     <td>{{data.name}}</td>
                     <td>{{(data.price-item.discount) * vm.tax | currency}}<img ng-show="data.discount>0" src="https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png" alt=""></td>
-                    <td>{{data.quantity}}</td>
-                    <td><div style="background-color: {{data.color}}" class="colorIcon"></div>{{data.color}}</td>
+                    <td>
+                        <button class="button increaseDecrease" ng-click="vm.increaseItemCount(data)">+</button><span>{{data.quantity}}</span>
+                        <button class="button increaseDecrease" ng-click="vm.decreaseItemCount(data)">-</button>
+                    </td>
+                    <td>
+                        <div style="background-color: {{data.color}}" class="colorIcon"></div>{{data.color}}</td>
                 </tr>
             </tbody>
         </table>

@@ -17,15 +17,20 @@ body {
 .shopular{
 	text-align: center;
 	margin-bottom: 20px;
+	margin-top: 30px;
 	color: #4ECDC4;
 }
 
+.topGreyRow{
+	height: 0px;
+}
 .colorIcon{
 	display: inline-block;
 	height: 12px;
 	width: 12px;
 	margin-right: 5px;
 	border-radius: 50%;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, .4);
 }
 header{
 	background-color: #292F36;
@@ -43,4 +48,33 @@ header{
 img{
 	width: 20px;
 	height: 20px;
+}
+
+.login{
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 30px;
+	background: #FF6B6B;
+}
+
+.well{
+	position: absolute;
+	margin-left: 100px;
+	padding: 10px;
+}
+
+.increaseDecrease{
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background-color: #4ECDC4;
+	border: none;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+span{
+	width: 30px;
+	display: inline-block;
+	text-align: center;
 }

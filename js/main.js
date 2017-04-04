@@ -26,6 +26,18 @@
             { "id": 683, "name": "Pillow", "price": 27, "quantity": 10, "color": "Black", "discount": 12 }
           ];
 
+          vm.increaseItemCount = function (data){
+            console.log(data);
+            data.quantity ++;
+          }
+          vm.decreaseItemCount = function (data){
+            console.log(data);
+            data.quantity --;
+          }
+          vm.click = function(){
+            vm.data.push(vm.item);
+            
+          }
 
         });
 })();
