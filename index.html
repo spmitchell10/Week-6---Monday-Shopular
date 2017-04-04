@@ -24,45 +24,23 @@
                             <h4 class="modal-title" id="myModalLabel">Add a Product!</h4>
                         </div>
                         <div class="modal-body">
-                            <form novalidate name='userDetails'>
-                                
+                            <form ng-submit="vm.submitForm(userForm.$valid)" novalidate name='userForm'>
                                 <label for="exampleInputEmail1">Name</label>
                                 <input type='text' class="form-control" placeholder="Name" ng-model='vm.item.name' required>
-
                                 <label for="exampleInputEmail1">Price</label>
                                 <input type='text' class="form-control" placeholder="Price" ng-model='vm.item.price' required>
-
                                 <label for="exampleInputEmail1">Quantity</label>
                                 <input type='number' class="form-control" placeholder="Quantity" ng-model='vm.item.quantity' required min='0' max='18'>
-
                                 <label for="exampleInputEmail1">Color</label>
                                 <input type='text' class="form-control" placeholder="Color" ng-model='vm.item.color' required>
-                                
+                                <div>
+                                <button ng-click="vm.click()" class="btn btn-primary" type="submit">
+                                    Submit
+                                </button>
+                                </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button ng-click="vm.click()" class="btn btn-primary" type="button">
-                                Submit
-                            </button>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="collapse" id="collapseExample">
-                <div class="well">
-                    <form novalidate ng-submit="submitForm(userForm.$valid)" name='userDetails'>
-                        Name:
-                        <input type='text' ng-model='vm.item.name' required>
-                        <br> Price:
-                        <input type='text' ng-model='vm.item.price' required>
-                        <br> Quantity:
-                        <input type='number' ng-model='vm.item.quantity' required min='0' max='18'>
-                        <br> Color:
-                        <input type='text' ng-model='vm.item.color' required>
-                        <button ng-click="vm.click()" class="btn btn-primary" type="submit">
-                            Submit
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>

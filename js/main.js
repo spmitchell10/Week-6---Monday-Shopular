@@ -38,11 +38,11 @@
             vm.data.push(vm.item);
             
           }
-          vm.click = function(isValid)
+          vm.submitForm = function(isValid){
             if(isValid){
               swal("Good job!", "You clicked the button!", "success");
             }
-
+          }
         });
 })();
 
