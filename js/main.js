@@ -38,7 +38,17 @@
             vm.data.push(vm.item);
             
           }
+          vm.click = function(isValid)
+            if(isValid){
+              swal("Good job!", "You clicked the button!", "success");
+            }
 
         });
 })();
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+
+
 
