@@ -7,6 +7,7 @@
         .controller('HeaderController', function Header() {
 
           const vm = this;
+          vm.tax = 1.065;
 
 
         vm.data = 
@@ -28,6 +29,4 @@
 
         });
 })();
-
-
 

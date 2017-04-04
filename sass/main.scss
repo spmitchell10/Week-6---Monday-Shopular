@@ -1,11 +1,10 @@
 body {
 	font-family: 'Work Sans', sans-serif;
-	padding-left: 200px;
-	padding-right: 200px;
-	height: 400px;
+	
 	.table{
 		transform: uppercase;
 		border: 1px solid lightgrey;
+		padding-top: 50px;
 		th, td{
 			border-right: 1px solid lightgrey;
 		}
@@ -18,6 +17,7 @@ body {
 .shopular{
 	text-align: center;
 	margin-bottom: 20px;
+	color: #4ECDC4;
 }
 
 .colorIcon{
@@ -25,4 +25,22 @@ body {
 	height: 12px;
 	width: 12px;
 	margin-right: 5px;
+	border-radius: 50%;
+}
+header{
+	background-color: #292F36;
+	margin-bottom: 20px;
+}
+
+.js{
+	color: white;
+}
+.bottomLine{
+	background: #FF6B6B;
+	height: 10px;
+}
+
+img{
+	width: 20px;
+	height: 20px;
 }

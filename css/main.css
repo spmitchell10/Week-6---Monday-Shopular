@@ -1,20 +1,35 @@
 body {
-  font-family: 'Work Sans', sans-serif;
-  padding-left: 200px;
-  padding-right: 200px;
-  height: 400px; }
+  font-family: 'Work Sans', sans-serif; }
   body .table {
     transform: uppercase;
-    border: 1px solid lightgrey; }
+    border: 1px solid lightgrey;
+    padding-top: 50px; }
     body .table th, body .table td {
       border-right: 1px solid lightgrey; }
 
 .shopular {
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: #4ECDC4; }
 
 .colorIcon {
   display: inline-block;
   height: 12px;
   width: 12px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  border-radius: 50%; }
+
+header {
+  background-color: #292F36;
+  margin-bottom: 20px; }
+
+.js {
+  color: white; }
+
+.bottomLine {
+  background: #FF6B6B;
+  height: 10px; }
+
+img {
+  width: 20px;
+  height: 20px; }
