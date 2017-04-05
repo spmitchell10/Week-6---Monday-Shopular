@@ -28,9 +28,11 @@
                                 <label for="exampleInputEmail1">Name</label>
                                 <input type='text' class="form-control" placeholder="Name" ng-model='vm.item.name' required>
                                 <label for="exampleInputEmail1">Price</label>
-                                <input type='text' class="form-control" placeholder="Price" ng-model='vm.item.price' required>
+                                <input type='number' class="form-control" placeholder="Price" ng-model='vm.item.price' required>
                                 <label for="exampleInputEmail1">Quantity</label>
                                 <input type='number' class="form-control" placeholder="Quantity" ng-model='vm.item.quantity' required min='0' max='18'>
+                                <label for="exampleInputEmail1">Discount</label>
+                                <input type='number' class="form-control" placeholder="Discount" ng-model='vm.item.discount' required min='0' max='18'>
                                 <label for="exampleInputEmail1">Color</label>
                                 <input type='text' class="form-control" placeholder="Color" ng-model='vm.item.color' required>
                                 <div class="footer">
@@ -59,7 +61,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="data in vm.data">
+                <tr ng-repeat="data in vm.data | orderBy:'quantity'">
                     <td>{{data.name}}</td>
                     <td>{{(data.price-item.discount) * vm.tax | currency}}<img ng-show="data.discount>0" src="https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png" alt=""></td>
                     <td>
@@ -79,6 +81,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/headroom.js"></script>
     <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
     <script src='js/main.js'></script>
+    <script src='js/Services/services.js'></script>
+    <script src='js/Controllers/tableControllers.js'></script>
 </body>
 
 </html>
