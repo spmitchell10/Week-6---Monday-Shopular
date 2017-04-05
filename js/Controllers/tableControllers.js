@@ -2,10 +2,11 @@
     'use strict';
 
     angular
-        .module('shopular', [])
-        .controller('HeaderController', function Header() {
+        .module('shopular')
+        .controller('HeaderController', function(API) {
 
             const vm = this;
+            vm.data = API.getData();
             vm.tax = 1.065;
 
             vm.increaseItemCount = function(data) {
