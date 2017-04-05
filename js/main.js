@@ -40,9 +40,15 @@
           }
           vm.submitForm = function(isValid){
             if(isValid){
-              swal("Good job!", "You clicked the button!", "success");
+              swal("Good job!", "You Added an Item!", "success");
             }
+            else{
+              sweetAlert("Oops...", "Something went wrong!", "error");
+
+            }
+
           }
+          
         });
 })();
 

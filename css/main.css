@@ -45,6 +45,9 @@ img {
   margin-top: 30px;
   background: #FF6B6B; }
 
+.footer {
+  margin-top: 10px; }
+
 .well {
   position: absolute;
   margin-left: 100px;
