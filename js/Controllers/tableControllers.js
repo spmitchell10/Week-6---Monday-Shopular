@@ -7,6 +7,7 @@
 
             const vm = this;
             vm.data = API.getData();
+            // vm.save = API.setItem(item)
             vm.tax = 1.065;
 
             vm.increaseItemCount = function(data) {
@@ -21,6 +22,7 @@
                 if (isValid) {
                     const newItem = Object.assign({},vm.item);
                     vm.data.push(newItem);
+                    vm.items = API.saveData(newItem);
                     vm.item = {};
                     swal(
                         "Good job!",

@@ -61,7 +61,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="data in vm.data | orderBy:'quantity'">
+                <tr ng-repeat="data in vm.data track by $index">
                     <td>{{data.name}}</td>
                     <td>{{(data.price-item.discount) * vm.tax | currency}}<img ng-show="data.discount>0" src="https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png" alt=""></td>
                     <td>
